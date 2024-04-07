@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar';
 import { notFound } from 'next/navigation';
 import React from 'react';
 import { HfInference } from '@huggingface/inference';
-import Link from 'next/link';
 
 
 async function getData() {
@@ -10,6 +9,7 @@ async function getData() {
     if (!res.ok) return notFound();
     return res.json();
 }
+
 
 async function summarizeText(description: any) {
     try {
@@ -120,14 +120,15 @@ async function ComplaintsPage() {
                             <td style={{ border: '1px solid #ddd', padding: '8px' }}>{post.sentiment}</td>
                             <td style={{ border: '1px solid #ddd', padding: '8px' }}>{post.department}</td>
                             <td style={{ border: '1px solid #ddd', padding: '8px', color: 'black' }}>
-                                <select >
-                                    <option value="Received">Received</option>
+                                <select>
+                                    <option value="Complaint Received">Complaint Received</option>
                                     <option value="Work Initiated">Work Initiated</option>
                                     <option value="Resolved">Resolved</option>
                                 </select>
+
                             </td>
                             <td style={{ border: '1px solid #ddd', padding: '8px' }}>
-                                <button >Update status</button>
+                                <button>Update status</button>
                             </td>
                         </tr>
                     ))}

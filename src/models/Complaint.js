@@ -1,10 +1,15 @@
-// models/Complaint.js
+
 const mongoose = require('mongoose');
 
 const complaintSchema = new mongoose.Schema({
     title: String,
     _id: String,
-    status: String,
+    id: Number,
+    status: {
+        type: String,
+        enum: ['Pending', 'In Progress', 'Resolved'],
+        default: 'Pending',
+    },
     description: String,
 });
 

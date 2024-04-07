@@ -21,9 +21,8 @@ const Navbar = () => {
                 <ul className="flex space-x-4">
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="/complaints">Complaints</Link></li>
-                    <li><Link href="/summary">Summary</Link></li>
-                    <li><Link href="/document-sharing">Document Sharing</Link></li>
-                    <li><Link href="/chats">Chats</Link></li>
+
+                    <li><Link href="/addEmployee">Add Employee</Link></li>
                 </ul>
             </div>
             <div>
